@@ -51,25 +51,37 @@ export function Intro() {
             <p className="label mt-4">Years of experience</p>
           </div>
 
-          <motion.div
+          {/* The reveal is a curtain that slides off, not a clip on the image's
+              own container. Clipping an ancestor to zero height leaves the
+              browser convinced a lazy image is off-screen, and if no further
+              scroll event arrives once the animation ends it never loads,
+              leaving an empty frame. The picture is always laid out; only the
+              curtain in front of it moves. */}
+          <div
             className="relative aspect-[16/10] overflow-hidden bg-graphite md:col-span-8 lg:col-span-9"
             data-cursor-mode="view"
-            initial={reduce ? undefined : { clipPath: "inset(0 0 100% 0)" }}
-            whileInView={{ clipPath: "inset(0 0 0% 0)" }}
-            viewport={viewportOnce}
-            transition={{ duration: 1.2, ease: easeOutExpo }}
           >
             <motion.div className="absolute -inset-y-[10%] inset-x-0" style={reduce ? undefined : { y: imgY }}>
               <Image
-                src={images.workshopSnowFoam}
-                alt="Snow foam covering a dark sports car inside the Luxor workshop"
+                src={images.waterSheetingCoupe}
+                alt="Water sheeting off the panels of a freshly detailed coupe"
                 fill
                 sizes="(max-width: 768px) 100vw, 70vw"
+                loading="eager"
                 className="object-cover"
               />
             </motion.div>
             <div className="absolute inset-0 bg-gradient-to-t from-ink/55 to-transparent" />
-          </motion.div>
+            {!reduce && (
+              <motion.div
+                className="pointer-events-none absolute inset-0 origin-bottom bg-ink"
+                initial={{ scaleY: 1 }}
+                whileInView={{ scaleY: 0 }}
+                viewport={viewportOnce}
+                transition={{ duration: 1.2, ease: easeOutExpo }}
+              />
+            )}
+          </div>
         </div>
       </div>
     </section>

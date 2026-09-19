@@ -51,11 +51,18 @@ export const siteConfig = {
     { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
     { label: "Work", href: "/gallery" },
-    { label: "Ceramic", href: "/services#ceramic" },
     { label: "Contact", href: "/contact" },
   ],
 } as const;
 
 export type SiteConfig = typeof siteConfig;
 
+/**
+ * Search-engine visibility. While this is false the site sends
+ * `noindex, nofollow` on every page and robots.txt disallows everything, so
+ * the work in progress cannot be indexed or crawled.
+ *
+ * FLIP TO TRUE AT LAUNCH. Nothing else needs changing: the metadata, the
+ * robots file and the sitemap all read this one value.
+ */
 export const isIndexable = false;

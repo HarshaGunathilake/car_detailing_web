@@ -29,8 +29,8 @@ export default function AboutPage() {
         eyebrow="About Luxor"
         lines={["Detailing is", "in the detail."]}
         intro="Passionate artisans dedicated to preserving and enhancing the beauty of your vehicle. Over ten years of hands-on work, from the Clayton South workshop."
-        image={images.workshopSnowFoam}
-        imageAlt="Snow foam covering a dark sports car inside the workshop"
+        image={images.machinePolisher}
+        imageAlt="Machine polishing a panel during paint correction"
       />
       <Intro />
       <Process />

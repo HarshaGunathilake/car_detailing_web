@@ -28,8 +28,8 @@ export function Hero() {
         style={reduce ? undefined : { scale, y }}
       >
         <Image
-          src={images.heroStudioCar}
-          alt="Dark studio portrait of a sports car after a full detail"
+          src={images.workshopSnowFoam}
+          alt="Snow foam covering a black sports car during a hand wash"
           fill
           priority
           fetchPriority="high"
@@ -39,8 +39,10 @@ export function Hero() {
       </motion.div>
 
       {/* Readability scrim. Bottom-weighted so the type sits in shadow. */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/70" />
-      <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_10%,transparent_35%,rgba(8,8,8,0.85)_100%)]" />
+      {/* Weighted to the bottom, where the type sits, so the picture keeps its
+          highlights at the top instead of going flat black. */}
+      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/25" />
+      <div className="absolute inset-0 bg-[radial-gradient(125%_85%_at_50%_0%,transparent_42%,rgba(8,8,8,0.72)_100%)]" />
 
       <motion.div
         className="shell relative flex min-h-[100dvh] flex-col justify-end pb-24 pt-24 md:pb-28"
