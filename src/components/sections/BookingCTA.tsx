@@ -10,6 +10,7 @@ import { MagneticButton } from "@/components/ui/MagneticButton";
 import { easeOutExpo, viewportOnce } from "@/lib/motion";
 import { useReduced } from "@/lib/useReduced";
 import { Button } from "@/components/ui/Button";
+import { images } from "@/data/images";
 
 export function BookingCTA() {
   const ref = useRef<HTMLElement>(null);
@@ -21,7 +22,7 @@ export function BookingCTA() {
     <section ref={ref} className="relative overflow-hidden border-b border-hairline">
       <motion.div className="absolute inset-0" style={reduce ? undefined : { scale }}>
         <Image
-          src="https://images.unsplash.com/photo-1626002595481-688505bc19ba?auto=format&fit=crop&q=85&w=2400"
+          src={images.finishedCarDusk}
           alt="Detailed sports car photographed at dusk"
           fill
           sizes="100vw"

@@ -1,7 +1,8 @@
+import { images } from "./images";
+
 /**
- * Before and after pairs.
- * The two entries below are Luxor's own photographs, served from the existing site.
- * Replace the URLs with local files under /public once the originals are on hand.
+ * Before and after pairs. Both are Luxor's own photographs, stored locally.
+ * Swap in higher-resolution originals under the same filenames when available.
  */
 export type Transformation = {
   id: string;
@@ -16,14 +17,14 @@ export const transformations: Transformation[] = [
     id: "t1",
     label: "Interior restoration",
     caption: "Fabric seats and carpets shampooed, steamed and extracted.",
-    before: "https://www.luxorcardetailing.com.au/images/2024/12/22/before-gallery-1.jpeg",
-    after: "https://www.luxorcardetailing.com.au/images/2024/12/22/after-gallery-1.jpeg",
+    before: images.transform1Before,
+    after: images.transform1After,
   },
   {
     id: "t2",
     label: "Full detail",
     caption: "A neglected vehicle returned to presentation condition.",
-    before: "https://www.luxorcardetailing.com.au/images/2024/12/22/before-gallery-2.jpeg",
-    after: "https://www.luxorcardetailing.com.au/images/2024/12/22/after-gallery-2.jpeg",
+    before: images.transform2Before,
+    after: images.transform2After,
   },
 ];

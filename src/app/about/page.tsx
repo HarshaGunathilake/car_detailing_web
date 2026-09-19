@@ -8,6 +8,7 @@ import { WhyLuxor } from "@/components/sections/WhyLuxor";
 import { Guarantee } from "@/components/sections/Guarantee";
 import { Reviews } from "@/components/sections/Reviews";
 import { BookingCTA } from "@/components/sections/BookingCTA";
+import { images } from "@/data/images";
 
 export const metadata: Metadata = {
   title: "About",
@@ -28,7 +29,7 @@ export default function AboutPage() {
         eyebrow="About Luxor"
         lines={["Detailing is", "in the detail."]}
         intro="Passionate artisans dedicated to preserving and enhancing the beauty of your vehicle. Over ten years of hands-on work, from the Clayton South workshop."
-        image="https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?auto=format&fit=crop&q=85&w=2400"
+        image={images.workshopSnowFoam}
         imageAlt="Snow foam covering a dark sports car inside the workshop"
       />
       <Intro />

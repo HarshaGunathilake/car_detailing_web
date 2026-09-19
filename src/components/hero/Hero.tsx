@@ -7,9 +7,7 @@ import { easeOutExpo } from "@/lib/motion";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { useReduced } from "@/lib/useReduced";
 import { Button } from "@/components/ui/Button";
-
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1653407497540-26207a2408d7?auto=format&fit=crop&q=85&w=2400";
+import { images } from "@/data/images";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -30,7 +28,7 @@ export function Hero() {
         style={reduce ? undefined : { scale, y }}
       >
         <Image
-          src={HERO_IMAGE}
+          src={images.heroStudioCar}
           alt="Dark studio portrait of a sports car after a full detail"
           fill
           priority

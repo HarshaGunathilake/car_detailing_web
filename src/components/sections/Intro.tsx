@@ -7,6 +7,7 @@ import { RevealText } from "@/components/ui/RevealText";
 import { Counter } from "@/components/ui/Counter";
 import { viewportOnce, easeOutExpo } from "@/lib/motion";
 import { useReduced } from "@/lib/useReduced";
+import { images } from "@/data/images";
 
 export function Intro() {
   const ref = useRef<HTMLElement>(null);
@@ -60,7 +61,7 @@ export function Intro() {
           >
             <motion.div className="absolute -inset-y-[10%] inset-x-0" style={reduce ? undefined : { y: imgY }}>
               <Image
-                src="https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?auto=format&fit=crop&q=80&w=2000"
+                src={images.workshopSnowFoam}
                 alt="Snow foam covering a dark sports car inside the Luxor workshop"
                 fill
                 sizes="(max-width: 768px) 100vw, 70vw"

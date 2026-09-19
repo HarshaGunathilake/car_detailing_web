@@ -10,6 +10,7 @@ import { MagneticButton } from "@/components/ui/MagneticButton";
 import { easeOutExpo, viewportOnce } from "@/lib/motion";
 import { useReduced } from "@/lib/useReduced";
 import { Button } from "@/components/ui/Button";
+import { images } from "@/data/images";
 
 export function CeramicFeature() {
   const ref = useRef<HTMLElement>(null);
@@ -26,7 +27,7 @@ export function CeramicFeature() {
     >
       <motion.div className="absolute -inset-y-[12%] inset-x-0" style={reduce ? undefined : { y }}>
         <Image
-          src="https://images.unsplash.com/photo-1550565076-b2371ea1a324?auto=format&fit=crop&q=85&w=2400"
+          src={images.ceramicBeading}
           alt="Water beading tightly across a ceramic coated black panel"
           fill
           sizes="100vw"

@@ -1,3 +1,5 @@
+import { images } from "./images";
+
 /**
  * Source of truth for every service, inclusion and price.
  * Content mirrors luxorcardetailing.com.au. Edit here, never in components.
@@ -72,8 +74,7 @@ export const services: Service[] = [
       },
     ],
     note: "Additional fees may apply for excessive dirt build-up, sand, pet hair, stains or vehicles requiring extra time and attention.",
-    image:
-      "https://images.unsplash.com/photo-1633014041037-f5446fb4ce99?auto=format&fit=crop&q=80&w=1800",
+    image: images.snowFoamHandWash,
     imageAlt: "Car covered in snow foam during a hand wash",
   },
   {
@@ -101,8 +102,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1682858110563-3f609263d418?auto=format&fit=crop&q=80&w=1800",
+    image: images.leatherInterior,
     imageAlt: "Detailed modern car interior with leather seats",
   },
   {
@@ -145,8 +145,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?auto=format&fit=crop&q=80&w=1800",
+    image: images.machinePolisher,
     imageAlt: "Dual action machine polisher used on vehicle paintwork",
   },
   {
@@ -181,8 +180,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=1800",
+    image: images.waterSheetingCoupe,
     imageAlt: "Water sheeting off the panels of a freshly detailed black coupe",
   },
   {
@@ -232,8 +230,7 @@ export const services: Service[] = [
       },
     ],
     note: "Warranty is subject to proper vehicle care and recommended maintenance procedures.",
-    image:
-      "https://images.unsplash.com/photo-1550565076-b2371ea1a324?auto=format&fit=crop&q=80&w=1800",
+    image: images.ceramicBeading,
     imageAlt: "Water beading tightly on a ceramic coated black panel",
     featured: true,
   },

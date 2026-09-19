@@ -8,6 +8,7 @@ import { PageHeader } from "@/components/sections/PageHeader";
 import { CeramicFeature } from "@/components/sections/CeramicFeature";
 import { BookingCTA } from "@/components/sections/BookingCTA";
 import { Button } from "@/components/ui/Button";
+import { images } from "@/data/images";
 
 export const metadata: Metadata = {
   title: "Services & Pricing",
@@ -29,7 +30,7 @@ export default function ServicesPage() {
         eyebrow="Services and pricing"
         lines={["Every job,", "priced plainly."]}
         intro="Five packages, each with its inclusions written out in full. Prices start at the figures below and move with vehicle size and the condition we find on the day."
-        image="https://images.unsplash.com/photo-1708805282706-f44730b7e527?auto=format&fit=crop&q=85&w=2400"
+        image={images.handAppliedProtection}
         imageAlt="Protective product being worked into a panel by hand"
       />
 

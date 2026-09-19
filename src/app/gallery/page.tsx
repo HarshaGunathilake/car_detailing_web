@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/sections/PageHeader";
 import { Gallery } from "@/components/sections/Gallery";
 import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { BookingCTA } from "@/components/sections/BookingCTA";
+import { images } from "@/data/images";
 
 export const metadata: Metadata = {
   title: "Our Work",
@@ -25,7 +26,7 @@ export default function GalleryPage() {
         eyebrow="Our work"
         lines={["The finish", "speaks for itself."]}
         intro="Exterior, interior, correction and protection. Filter by the kind of work you are considering, then open any frame to see it full size."
-        image="https://images.unsplash.com/photo-1526459915562-c5ca724b1d02?auto=format&fit=crop&q=85&w=2400"
+        image={images.correctedPaint}
         imageAlt="Close detail of corrected black paintwork"
       />
       <Gallery />

@@ -14,7 +14,7 @@ export function Footer() {
               alt={siteConfig.name}
               width={579}
               height={314}
-              className="h-14 w-auto"
+              className="h-20 w-auto"
             />
             <p className="mt-4 max-w-[34ch] text-sm leading-relaxed text-ash">
               Premium car detailing, paint correction and ceramic coating in Clayton South, Melbourne.

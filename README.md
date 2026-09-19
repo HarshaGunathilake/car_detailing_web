@@ -8,14 +8,18 @@ Next.js App Router, TypeScript, Tailwind v4, Motion, GSAP ScrollTrigger and Leni
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
-npm run build    # production build
-npm start        # serve the production build
+npm run fetch:images   # one-off, downloads the photography into public/images
+npm run dev            # http://localhost:3000
+npm run build          # production build
+npm start              # serve the production build
 npm run lint
 npm run typecheck
 ```
 
 Node 20 or newer.
+
+`npm run fetch:images` is required once after cloning. The build runs
+`check:images` first and stops with the list of missing files if it was skipped.
 
 ## Where the content lives
 
@@ -30,6 +34,7 @@ Nothing in `src/components` holds copy or prices. Everything editable sits in `s
 | `process.ts` | The five workshop steps |
 | `why.ts` | Why Luxor points and the guarantee points |
 | `reviews.ts` | Customer reviews |
+| `images.ts` | Every photograph on the site, by role. All paths local. |
 
 Change a price in `services.ts` and it updates the home page panels, the services page,
 the footer links and the LocalBusiness structured data at once.
@@ -44,12 +49,27 @@ note rather than presenting the samples as real. If the array is emptied, the se
 hides itself.
 
 **2. Photography is licensed stock.**
-Every image is a hand-picked Unsplash photograph referenced by URL, except the two
-before and after pairs in `transformations.ts`, which are Luxor's own photos served
-from the existing site. To swap in Luxor's own shots, drop the files into
-`public/images/` and change the `src` strings in the data files to `/images/name.jpg`.
-No component changes needed. `next.config.ts` allow-lists `images.unsplash.com` and
-`www.luxorcardetailing.com.au`; add any new remote host there.
+The 22 workshop and vehicle shots are hand-picked Unsplash photographs; the four
+before and after frames are Luxor's own. All of them are stored locally, so nothing
+is requested from a third party at runtime.
+
+To use a Luxor original, drop it into `public/images/` under the **same filename** and
+it is picked up with no code change. To add or rename one, edit
+`scripts/image-sources.json` and `src/data/images.ts` together; `check:images` fails
+the build if the two ever drift apart.
+
+## Images
+
+Every photograph lives in `public/images/` and is referenced through
+`src/data/images.ts`. No component contains an image URL, and `next.config.ts`
+allow-lists no remote host, so a third-party outage or a hot-link block cannot
+affect the site.
+
+| File | Role |
+| --- | --- |
+| `scripts/image-sources.json` | Filename to source URL for all 26 photographs |
+| `scripts/fetch-images.mjs` | `npm run fetch:images`. Skips files already present, so it never overwrites a Luxor original. `--force` refetches. |
+| `scripts/check-images.mjs` | `npm run check:images`. Runs before every build; fails if a file is missing or the manifest and `images.ts` disagree. |
 
 ## Brand assets
 

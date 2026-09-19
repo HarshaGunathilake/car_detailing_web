@@ -34,13 +34,13 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
           exit={{ clipPath: "inset(0 0 100% 0)", transition: { duration: 0.4, ease: easeOutExpo } }}
           transition={{ duration: 0.6, ease: easeOutExpo }}
         >
-          <div className="shell flex h-16 shrink-0 items-center justify-between">
+          <div className="shell flex h-[4.5rem] shrink-0 items-center justify-between">
             <Image
               src="/logo-light.png"
               alt={siteConfig.name}
               width={579}
               height={314}
-              className="h-8 w-auto"
+              className="h-11 w-auto"
             />
             <button
               type="button"

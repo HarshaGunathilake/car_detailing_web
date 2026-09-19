@@ -1,0 +1,31 @@
+{
+  "_comment": "Source of truth for every photograph on the site. `npm run fetch:images` downloads each entry into public/images/. Replace any file with a Luxor original of the same name and the site picks it up with no code change.",
+  "images": {
+    "studio-black-sports-car.jpg": "https://images.unsplash.com/photo-1653407497540-26207a2408d7?auto=format&fit=crop&q=82&w=2400",
+    "snow-foam-black-car.jpg": "https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?auto=format&fit=crop&q=82&w=2400",
+    "water-beading-black-panel.jpg": "https://images.unsplash.com/photo-1550565076-b2371ea1a324?auto=format&fit=crop&q=82&w=2400",
+    "detailed-sports-car-dusk.jpg": "https://images.unsplash.com/photo-1626002595481-688505bc19ba?auto=format&fit=crop&q=82&w=2400",
+    "hand-applied-protection.jpg": "https://images.unsplash.com/photo-1708805282706-f44730b7e527?auto=format&fit=crop&q=82&w=2400",
+    "corrected-black-paint.jpg": "https://images.unsplash.com/photo-1526459915562-c5ca724b1d02?auto=format&fit=crop&q=82&w=2400",
+    "black-car-plain-wall.jpg": "https://images.unsplash.com/photo-1609521233053-345bfa8b6f17?auto=format&fit=crop&q=82&w=2400",
+    "snow-foam-hand-wash.jpg": "https://images.unsplash.com/photo-1633014041037-f5446fb4ce99?auto=format&fit=crop&q=82&w=1800",
+    "leather-interior.jpg": "https://images.unsplash.com/photo-1682858110563-3f609263d418?auto=format&fit=crop&q=82&w=1800",
+    "machine-polisher.jpg": "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?auto=format&fit=crop&q=82&w=1800",
+    "water-sheeting-coupe.jpg": "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=82&w=1800",
+    "pre-rinse-wash.jpg": "https://images.unsplash.com/photo-1694678505383-676d78ea3b96?auto=format&fit=crop&q=82&w=1800",
+    "cabin-dashboard.jpg": "https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?auto=format&fit=crop&q=82&w=1400",
+    "alloy-wheel-clean.jpg": "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?auto=format&fit=crop&q=82&w=1400",
+    "steering-wheel.jpg": "https://images.unsplash.com/photo-1502014335594-c026800f24ee?auto=format&fit=crop&q=82&w=1400",
+    "beads-protected-surface.jpg": "https://images.unsplash.com/photo-1665434009255-92af2b6b44f9?auto=format&fit=crop&q=82&w=1400",
+    "headlight-restored.jpg": "https://images.unsplash.com/photo-1618642542397-ef97a739f1d7?auto=format&fit=crop&q=82&w=1400",
+    "leather-conditioned.jpg": "https://images.unsplash.com/photo-1519120433933-22bc753101f3?auto=format&fit=crop&q=82&w=1400",
+    "bonnet-reflection.jpg": "https://images.unsplash.com/photo-1773236321529-fe13541e95f2?auto=format&fit=crop&q=82&w=1400",
+    "droplets-macro.jpg": "https://images.unsplash.com/photo-1608382247609-7078eb3f9108?auto=format&fit=crop&q=82&w=1400",
+    "seat-stitching.jpg": "https://images.unsplash.com/photo-1614273444704-26eb9f90d1e7?auto=format&fit=crop&q=82&w=1400",
+    "gloss-macro.jpg": "https://images.unsplash.com/photo-1567410508636-da81b03875a7?auto=format&fit=crop&q=82&w=1400",
+    "transform-1-before.jpg": "https://www.luxorcardetailing.com.au/images/2024/12/22/before-gallery-1.jpeg",
+    "transform-1-after.jpg": "https://www.luxorcardetailing.com.au/images/2024/12/22/after-gallery-1.jpeg",
+    "transform-2-before.jpg": "https://www.luxorcardetailing.com.au/images/2024/12/22/before-gallery-2.jpeg",
+    "transform-2-after.jpg": "https://www.luxorcardetailing.com.au/images/2024/12/22/after-gallery-2.jpeg"
+  }
+}

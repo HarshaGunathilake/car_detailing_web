@@ -31,7 +31,7 @@ export function Navbar() {
             : "border-b border-transparent bg-transparent",
         )}
       >
-        <div className="shell flex h-16 items-center justify-between gap-6 md:h-[4.5rem]">
+        <div className="shell flex h-[4.5rem] items-center justify-between gap-6 md:h-20">
           <Link href="/" aria-label={`${siteConfig.name} home`} className="shrink-0">
             <Image
               src="/logo-light.png"
@@ -40,7 +40,7 @@ export function Navbar() {
               height={314}
               priority
               className="w-auto transition-[height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
-              style={{ height: scrolled || reduce ? "2.125rem" : "2.5rem" }}
+              style={{ height: scrolled || reduce ? "2.75rem" : "3.25rem" }}
             />
           </Link>
 
