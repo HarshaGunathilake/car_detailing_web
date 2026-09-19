@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-ink: #080808;
+  --color-carbon: #0d0d0d;
+  --color-graphite: #111111;
+  --color-steel: #191919;
+  --color-hairline: #262523;
+
+  /* Type */
+  --color-bone: #f5f3ef;
+  --color-ash: #8e8b85;
+  --color-smoke: #5d5b57;
+
+  /* Single accent. Used for small highlights only. */
+  --color-champagne: #c6a96b;
+
+  --font-display: var(--font-display), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+
+  --radius-none: 0px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  color-scheme: dark;
+  --gutter: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 2.5rem; }
+}
+@media (min-width: 1280px) {
+  :root { --gutter: 4rem; }
+}
+
+* {
+  border-color: var(--color-hairline);
+}
+
+html {
+  background-color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-champagne);
+  color: var(--color-ink);
+}
+
+/* Focus ring: visible, on-brand, never removed. */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-champagne);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* ---- Utilities -------------------------------------------------------- */
+
+@utility shell {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 96rem;
+  padding-inline: var(--gutter);
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+@utility label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+}
+
+@utility hairline {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-hairline) 12%,
+    var(--color-hairline) 88%,
+    transparent
+  );
+}
+
+/* Cinematic grain. Fixed layer only, never on a scrolling container. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Hide the native cursor only while the custom one is active. */
+html[data-cursor="on"],
+html[data-cursor="on"] * {
+  cursor: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  html[data-cursor="on"],
+  html[data-cursor="on"] * {
+    cursor: auto;
+  }
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .grain {
+    display: none;
+  }
+}
